@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="pooriGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="#FFFBF5"/>
+  <ellipse cx="200" cy="175" rx="160" ry="58" fill="#E2E8F0"/>
+  <ellipse cx="200" cy="171" rx="145" ry="50" fill="#FFFFFF"/>
+  <ellipse cx="145" cy="160" rx="55" ry="38" fill="url(#pooriGold)"/>
+  <ellipse cx="140" cy="150" rx="45" ry="28" fill="#FBBF24" opacity="0.6"/>
+  <ellipse cx="245" cy="165" rx="58" ry="40" fill="url(#pooriGold)"/>
+  <ellipse cx="240" cy="155" rx="48" ry="30" fill="#FBBF24" opacity="0.6"/>
+  <ellipse cx="200" cy="95" rx="45" ry="26" fill="#94A3B8"/>
+  <ellipse cx="200" cy="92" rx="40" ry="22" fill="#EAB308"/>
+  <circle cx="190" cy="90" r="3.5" fill="#15803D"/>
+  <circle cx="208" cy="92" r="3" fill="#DC2626"/>
+  <circle cx="200" cy="96" r="3" fill="#CA8A04"/>
+</svg>

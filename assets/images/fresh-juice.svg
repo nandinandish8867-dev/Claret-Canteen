@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="juiceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="#FFFDF8"/>
+  <ellipse cx="200" cy="225" rx="90" ry="25" fill="#E2E8F0"/>
+  <path d="M150 70 L165 215 Q200 225 235 215 L250 70 Z" fill="#E2E8F0" opacity="0.6"/>
+  <path d="M153 95 L166 212 Q200 220 234 212 L247 95 Z" fill="url(#juiceGrad)"/>
+  <ellipse cx="200" cy="95" rx="47" ry="12" fill="#FB923C"/>
+  <rect x="175" y="110" width="22" height="20" rx="4" fill="#FFFFFF" opacity="0.7" transform="rotate(10 175 110)"/>
+  <rect x="200" y="130" width="20" height="18" rx="4" fill="#FFFFFF" opacity="0.7" transform="rotate(-15 200 130)"/>
+  <line x1="220" y1="40" x2="185" y2="190" stroke="#EF4444" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="245" cy="70" r="22" fill="#FACC15"/>
+  <circle cx="245" cy="70" r="18" fill="#FEF08A"/>
+  <line x1="227" y1="70" x2="263" y2="70" stroke="#FACC15" stroke-width="1.5"/>
+  <line x1="245" y1="52" x2="245" y2="88" stroke="#FACC15" stroke-width="1.5"/>
+</svg>

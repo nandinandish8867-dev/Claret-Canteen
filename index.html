@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claret Canteen — Campus Food Ordering System</title>
+  <meta name="description" content="Order fresh and hygienic food directly from the college canteen without waiting in long lines. BCA project campus dining portal.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <script type="module" src="firebase-config.js"></script>
+  <script src="gemini-assistant.js" defer></script>
+</head>
+<body data-page="home">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Logo Branding -->
+      <a href="index.html" class="brand-logo" aria-label="Claret Canteen Home">
+        <img src="assets/images/logo.svg" alt="Claret Canteen Logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="primaryNav">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="cart.html" class="nav-link" data-action="open-cart">Cart</a></li>
+        <li><a href="order.html" class="nav-link">Track Order</a></li>
+        <li><a href="admin.html" class="nav-link">Admin</a></li>
+        <li>
+          <button class="cart-nav-btn" data-action="open-cart" aria-label="View Shopping Cart">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span>Cart</span>
+            <span class="cart-count-badge">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span>🎓 Official BCA Campus Dining System</span>
+          </div>
+          <h1 class="hero-title">Fresh Food. Easy Ordering. <span>Campus Ready.</span></h1>
+          <p class="hero-subtitle">
+            Skip the crowd and order delicious, hygienic food directly from the college canteen. Place your order during lectures, pick up during break, and enjoy zero waiting time in long queues.
+          </p>
+          <div class="hero-actions">
+            <a href="menu.html" class="btn btn-primary btn-lg">Order Food →</a>
+            <a href="menu.html" class="btn btn-secondary btn-lg">View Menu</a>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant Token Generation</span>
+            </div>
+            <div class="hero-feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Campus Pocket-Friendly</span>
+            </div>
+            <div class="hero-feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Live Order Tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card-frame">
+            <img src="assets/images/canteen-hero.svg" alt="Claret Canteen Food Station Illustration">
+            <div class="hero-floating-badge">
+              <div class="badge-icon">⚡</div>
+              <div class="badge-text">
+                <strong>Break Time Express</strong>
+                <span>Pick up in 10–15 mins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODAY'S SPECIAL -->
+    <section class="section special-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Chef's Daily Highlight</span>
+          <h2 class="section-title">Today's Special</h2>
+          <p class="section-subtitle">Specially prepared South Indian breakfast delight, made fresh on hot cast-iron tavas every morning.</p>
+        </div>
+        <!-- Rendered Dynamically by script.js -->
+        <div class="today-special-container"></div>
+      </div>
+    </section>
+
+    <!-- POPULAR ITEMS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Campus Favorites</span>
+          <h2 class="section-title">Popular Items</h2>
+          <p class="section-subtitle">The most loved breakfast bites, wholesome meals, and refreshing drinks ordered daily by students and faculty.</p>
+        </div>
+        <!-- Rendered Dynamically by script.js -->
+        <div class="food-grid popular-food-grid"></div>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="menu.html" class="btn btn-secondary btn-lg">Explore Full Menu (17+ Dishes) →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE CLARET CANTEEN -->
+    <section class="section features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Smart Campus Life</span>
+          <h2 class="section-title">Why Choose Claret Canteen?</h2>
+          <p class="section-subtitle">Designed specifically for our college campus community to optimize break times and eliminate canteen hassles.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">⚡</div>
+            <h3 class="feature-title">Quick Ordering</h3>
+            <p class="feature-text">Select dishes, specify your student details, and place your order in under 60 seconds from your phone or laptop.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">💰</div>
+            <h3 class="feature-title">Affordable Prices</h3>
+            <p class="feature-text">Budget-friendly campus rates on nutritious breakfasts, hearty thalis, snacks, and beverages without hidden charges.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">🚫</div>
+            <h3 class="feature-title">No Long Queues</h3>
+            <p class="feature-text">Never waste your 20-minute break standing in billing line. Your order is queued digitally before you even arrive.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">📍</div>
+            <h3 class="feature-title">Easy Order Tracking</h3>
+            <p class="feature-text">Visual stage-by-stage status timeline keeps you updated when your food is being prepared and ready for pickup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY SHORTCUTS -->
+    <section class="section category-shortcuts-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Browse by Category</span>
+          <h2 class="section-title">What Are You Craving?</h2>
+          <p class="section-subtitle">Tap a category to instantly browse all dishes in that section.</p>
+        </div>
+        <div class="category-shortcuts-grid">
+          <a href="menu.html#breakfast" class="category-shortcut-card" onclick="localStorage.setItem('menuCategory','Breakfast')">
+            <span class="category-shortcut-icon">🌅</span>
+            <span>Breakfast</span>
+          </a>
+          <a href="menu.html" class="category-shortcut-card" onclick="localStorage.setItem('menuCategory','Lunch')">
+            <span class="category-shortcut-icon">🍱</span>
+            <span>Lunch</span>
+          </a>
+          <a href="menu.html" class="category-shortcut-card" onclick="localStorage.setItem('menuCategory','Snacks')">
+            <span class="category-shortcut-icon">🥙</span>
+            <span>Snacks</span>
+          </a>
+          <a href="menu.html" class="category-shortcut-card" onclick="localStorage.setItem('menuCategory','Fast Food')">
+            <span class="category-shortcut-icon">🍔</span>
+            <span>Fast Food</span>
+          </a>
+          <a href="menu.html" class="category-shortcut-card" onclick="localStorage.setItem('menuCategory','Beverages')">
+            <span class="category-shortcut-icon">☕</span>
+            <span>Beverages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-it-works-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple & Fast</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Order your campus meal in three simple steps — no cash, no waiting in line.</p>
+        </div>
+        <div class="how-steps-grid">
+          <div class="how-step-card">
+            <span class="how-step-icon">🍽️</span>
+            <div class="how-step-number">1</div>
+            <div class="how-step-title">Browse & Add to Cart</div>
+            <div class="how-step-desc">Explore our full canteen menu and add your favorite dishes to your digital tray with a single tap.</div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-icon">📝</span>
+            <div class="how-step-number">2</div>
+            <div class="how-step-title">Fill Your Details</div>
+            <div class="how-step-desc">Enter your student name, roll number, and select a break slot for pickup. No account or password needed.</div>
+          </div>
+          <div class="how-step-card">
+            <span class="how-step-icon">🔔</span>
+            <div class="how-step-number">3</div>
+            <div class="how-step-title">Pick Up & Enjoy</div>
+            <div class="how-step-desc">Your unique Order ID is generated. Head to Counter 2 during your break slot and collect your freshly prepared meal.</div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="menu.html" class="btn btn-primary btn-lg">Start Ordering →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO SECTION -->
+    <section class="promo-section">
+      <div class="container">
+        <span class="section-tag">Campus Special</span>
+        <h2>Pocket-Friendly Campus Prices</h2>
+        <p>Enjoy hygienic, freshly prepared meals at affordable student-friendly rates. No hidden charges — what you see is what you pay.</p>
+        <div class="promo-badges">
+          <span class="promo-badge">🥗 100% Fresh Daily</span>
+          <span class="promo-badge">💰 Starting from ₹15</span>
+          <span class="promo-badge">⚡ Ready in 10-15 Mins</span>
+          <span class="promo-badge">🚫 Zero Hidden Charges</span>
+        </div>
+        <a href="menu.html" class="btn" style="background:#fff; color:var(--primary); font-weight:700; padding:0.85rem 2rem; border-radius:var(--radius-full);">Explore Full Menu →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== GLOBAL CART DRAWER ==================== -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <span>🛒 Your Cart</span>
+      </h3>
+      <button class="cart-close-btn" aria-label="Close Shopping Cart">×</button>
+    </div>
+    <div class="cart-drawer-body">
+      <!-- Dynamic Cart Items -->
+    </div>
+    <div class="cart-drawer-footer">
+      <!-- Dynamic Cart Totals & Checkout CTA -->
+    </div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <span style="color:var(--accent-gold);">CLARET</span> CANTEEN
+          </h3>
+          <p>Campus Food Ordering System — Empowering college students and faculty with fast, queue-free, hygienic dining.</p>
+          <span class="badge badge-claret" style="background:rgba(255,255,255,0.1); color:#FFFFFF;">BCA Final Year Project Demo</span>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Full Food Menu</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="order.html">Track Active Order</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Canteen Timings</h4>
+          <div class="footer-info-item">
+            <span>🕒 Mon – Sat: 8:00 AM – 5:00 PM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>☕ Morning Break: 10:30 AM – 11:00 AM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>🍛 Lunch Break: 12:45 PM – 1:45 PM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>📍 Campus Block C, Ground Floor</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Project Notice</h4>
+          <p style="font-size:0.85rem; color:#9CA3AF; line-height:1.5;">
+            Built with semantic HTML5, modern CSS3, and Vanilla JavaScript. Client-side state managed via localStorage without external databases.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Claret Canteen. All rights reserved.</p>
+        <p>Campus Food Ordering System • BCA Academic Demonstration</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

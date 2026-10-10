@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bgDosa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F0"/>
+      <stop offset="100%" stop-color="#F3E9DD"/>
+    </linearGradient>
+    <linearGradient id="dosaCrust" x1="0%" y1="30%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="40%" stop-color="#D97706"/>
+      <stop offset="80%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="url(#bgDosa)"/>
+  <path d="M40 180 C60 100, 340 100, 360 180 C370 220, 30 220, 40 180 Z" fill="url(#leafGrad)" opacity="0.9"/>
+  <line x1="60" y1="170" x2="340" y2="170" stroke="#166534" stroke-width="2" stroke-dasharray="8,8"/>
+  <ellipse cx="200" cy="160" rx="145" ry="32" fill="url(#dosaCrust)"/>
+  <ellipse cx="200" cy="155" rx="138" ry="26" fill="#FBBF24"/>
+  <path d="M120 145 Q160 162 210 148 Q250 164 285 146" stroke="#B45309" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M100 156 Q140 168 180 156 Q230 170 270 158" stroke="#92400E" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <ellipse cx="95" cy="85" rx="35" ry="24" fill="#E5E7EB"/>
+  <ellipse cx="95" cy="83" rx="30" ry="20" fill="#EA580C"/>
+  <circle cx="90" cy="80" r="4" fill="#15803D"/>
+  <circle cx="102" cy="85" r="3" fill="#DC2626"/>
+  <ellipse cx="195" cy="75" rx="30" ry="20" fill="#E5E7EB"/>
+  <ellipse cx="195" cy="73" rx="26" ry="16" fill="#FEFCE8"/>
+  <circle cx="193" cy="71" r="2" fill="#1F2937"/>
+  <circle cx="197" cy="74" r="2" fill="#15803D"/>
+  <ellipse cx="290" cy="85" rx="32" ry="22" fill="#E5E7EB"/>
+  <ellipse cx="290" cy="83" rx="27" ry="17" fill="#DC2626"/>
+  <circle cx="288" cy="81" r="2" fill="#1F2937"/>
+  <path d="M170 120 Q165 105 175 95" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M225 122 Q220 107 230 97" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+</svg>

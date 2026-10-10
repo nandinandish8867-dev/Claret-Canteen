@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="claretGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8F1D30" />
+      <stop offset="100%" stop-color="#540B18" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Badge -->
+  <rect x="6" y="6" width="48" height="48" rx="12" fill="url(#claretGrad)" />
+  <!-- Cloche / Plate Symbol -->
+  <path d="M18 36 h24 a12 12 0 0 0 -24 0 z" fill="#FFF8F0" />
+  <path d="M28 20 a2 2 0 1 1 4 0 v4 h-4 z" fill="#F5EFE6" />
+  <line x1="16" y1="38" x2="44" y2="38" stroke="#FFF8F0" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Graduation Spark / Star -->
+  <circle cx="39" cy="18" r="3" fill="#EAB308" />
+  <!-- Brand Text -->
+  <text x="64" y="31" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="20" font-weight="800" fill="#7B1123" letter-spacing="0.5">CLARET</text>
+  <text x="145" y="31" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="20" font-weight="800" fill="#1F2421" letter-spacing="0.5">CANTEEN</text>
+  <text x="65" y="47" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#667085" letter-spacing="1">CAMPUS FOOD ORDERING</text>
+</svg>

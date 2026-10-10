@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="60%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="#FFFDF8"/>
+  <ellipse cx="200" cy="205" rx="130" ry="40" fill="#E2E8F0"/>
+  <path d="M110 180 Q200 180 290 180 Q290 205 200 205 Q110 205 110 180 Z" fill="url(#bunGrad)"/>
+  <rect x="100" y="165" width="200" height="16" rx="8" fill="#78350F"/>
+  <polygon points="100,165 140,175 180,165 220,178 260,165 300,168 300,160 100,160" fill="#FBBF24"/>
+  <rect x="110" y="150" width="180" height="12" rx="6" fill="#EF4444"/>
+  <path d="M95 148 Q115 140 135 148 Q155 140 175 148 Q195 140 215 148 Q235 140 255 148 Q275 140 295 148 Q305 152 295 155 Q200 160 95 155 Z" fill="#22C55E"/>
+  <path d="M100 142 C100 80 300 80 300 142 Z" fill="url(#bunGrad)"/>
+  <ellipse cx="160" cy="105" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(-15 160 105)"/>
+  <ellipse cx="200" cy="95" rx="3" ry="1.5" fill="#FEF3C7"/>
+  <ellipse cx="240" cy="105" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(15 240 105)"/>
+  <ellipse cx="180" cy="118" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(-5 180 118)"/>
+  <ellipse cx="220" cy="118" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(10 220 118)"/>
+</svg>

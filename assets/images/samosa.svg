@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="samosaCrust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="60%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="#FFFDF8"/>
+  <ellipse cx="200" cy="190" rx="155" ry="55" fill="#E2E8F0"/>
+  <ellipse cx="200" cy="186" rx="142" ry="48" fill="#FFFFFF"/>
+  <polygon points="140,95 85,185 195,185" fill="url(#samosaCrust)"/>
+  <line x1="140" y1="95" x2="140" y2="185" stroke="#92400E" stroke-width="2.5" opacity="0.6"/>
+  <polygon points="250,90 195,182 305,182" fill="url(#samosaCrust)"/>
+  <line x1="250" y1="90" x2="250" y2="182" stroke="#92400E" stroke-width="2.5" opacity="0.6"/>
+  <ellipse cx="140" cy="215" rx="30" ry="16" fill="#CBD5E1"/>
+  <ellipse cx="140" cy="213" rx="26" ry="13" fill="#15803D"/>
+  <ellipse cx="260" cy="215" rx="30" ry="16" fill="#CBD5E1"/>
+  <ellipse cx="260" cy="213" rx="26" ry="13" fill="#7C2D12"/>
+  <path d="M190 200 Q205 185 220 205" stroke="#16A34A" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

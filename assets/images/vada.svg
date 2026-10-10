@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bgVada" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBF5"/>
+      <stop offset="100%" stop-color="#F1E3D3"/>
+    </linearGradient>
+    <linearGradient id="vadaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="60%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="url(#bgVada)"/>
+  <ellipse cx="200" cy="175" rx="155" ry="58" fill="#E2E8F0"/>
+  <ellipse cx="200" cy="171" rx="142" ry="50" fill="#FFFFFF"/>
+  <path d="M95 160 C95 130 175 130 175 160 C175 190 95 190 95 160 Z" fill="url(#vadaGold)"/>
+  <ellipse cx="135" cy="160" rx="14" ry="10" fill="#FFFFFF"/>
+  <circle cx="120" cy="150" r="2" fill="#78350F"/>
+  <circle cx="150" cy="168" r="2" fill="#78350F"/>
+  <path d="M225 160 C225 130 305 130 305 160 C305 190 225 190 225 160 Z" fill="url(#vadaGold)"/>
+  <ellipse cx="265" cy="160" rx="14" ry="10" fill="#FFFFFF"/>
+  <ellipse cx="200" cy="100" rx="44" ry="26" fill="#94A3B8"/>
+  <ellipse cx="200" cy="97" rx="39" ry="22" fill="#D97706"/>
+  <circle cx="195" cy="94" r="3" fill="#15803D"/>
+  <circle cx="206" cy="98" r="2" fill="#DC2626"/>
+</svg>

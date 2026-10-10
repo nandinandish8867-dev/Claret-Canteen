@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Pickup Details — Claret Canteen</title>
+  <meta name="description" content="Enter student credentials and select break pickup time to place your canteen food order.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <script type="module" src="firebase-config.js"></script>
+  <script src="gemini-assistant.js" defer></script>
+</head>
+<body data-page="checkout">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Claret Canteen Home">
+        <img src="assets/images/logo.svg" alt="Claret Canteen Logo">
+      </a>
+
+      <ul class="nav-links" id="primaryNav">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="cart.html" class="nav-link" data-action="open-cart">Cart</a></li>
+        <li><a href="order.html" class="nav-link">Track Order</a></li>
+        <li><a href="admin.html" class="nav-link">Admin</a></li>
+        <li>
+          <button class="cart-nav-btn" data-action="open-cart" aria-label="Shopping Cart">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span>Cart</span>
+            <span class="cart-count-badge">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== CHECKOUT MAIN ==================== -->
+  <main class="section" style="padding-top: 2.5rem;">
+    <div class="container checkout-container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Student Verification</span>
+        <h1 class="section-title">Pickup Checkout</h1>
+        <p class="section-subtitle">Provide your student details and select your preferred campus break slot for counter pickup.</p>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Left: Student Order Form Card -->
+        <div class="checkout-form-card">
+          <div class="form-header">
+            <h2>Student Order Form</h2>
+            <p>Please ensure your details match your college ID card for smooth counter pickup.</p>
+          </div>
+
+          <form id="checkoutForm" class="checkout-form" novalidate>
+            <!-- 1. Student Name -->
+            <div class="form-group">
+              <label for="studentName" class="form-label">
+                Student Full Name <span class="req">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="studentName" 
+                class="form-control" 
+                placeholder="e.g. Rahul Sharma" 
+                required 
+                autocomplete="name">
+              <span id="nameError" class="form-error-msg"></span>
+            </div>
+
+            <!-- 2. Roll Number & Class Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="rollNumber" class="form-label">
+                  College Roll No. <span class="req">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="rollNumber" 
+                  class="form-control" 
+                  placeholder="e.g. 23BCA108" 
+                  required>
+                <span id="rollError" class="form-error-msg"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="className" class="form-label">
+                  Class / Semester <span class="req">*</span>
+                </label>
+                <select id="className" class="form-control" required>
+                  <option value="">Select your course...</option>
+                  <option value="BCA 1st Year (Sem 1/2)">BCA 1st Year (Sem 1/2)</option>
+                  <option value="BCA 2nd Year (Sem 3/4)">BCA 2nd Year (Sem 3/4)</option>
+                  <option value="BCA 3rd Year (Sem 5/6)">BCA 3rd Year (Sem 5/6)</option>
+                  <option value="B.Sc Computer Science">B.Sc Computer Science</option>
+                  <option value="B.Com / BBA">B.Com / BBA</option>
+                  <option value="College Staff / Faculty">College Staff / Faculty</option>
+                </select>
+                <span id="classError" class="form-error-msg"></span>
+              </div>
+            </div>
+
+            <!-- 3. Phone Number -->
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                Phone Number <span class="req">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                class="form-control" 
+                placeholder="10-digit mobile number (e.g. 9876543210)" 
+                maxlength="10" 
+                required 
+                autocomplete="tel">
+              <span class="form-hint">Used for order ready pickup notifications.</span>
+              <span id="phoneError" class="form-error-msg"></span>
+            </div>
+
+            <!-- 4. Pickup Time Slot -->
+            <div class="form-group">
+              <label for="pickupTime" class="form-label">
+                Select Pickup Time Slot <span class="req">*</span>
+              </label>
+              <select id="pickupTime" class="form-control" required>
+                <option value="">Choose your break slot...</option>
+                <option value="10:30 AM (Morning Short Break)">10:30 AM (Morning Short Break)</option>
+                <option value="12:45 PM (Lunch Break Slot 1)">12:45 PM (Lunch Break Slot 1)</option>
+                <option value="1:15 PM (Lunch Break Slot 2)">1:15 PM (Lunch Break Slot 2)</option>
+                <option value="3:30 PM (Evening Break)">3:30 PM (Evening Break)</option>
+                <option value="Immediate Preparation (In 15 Mins)">Immediate Preparation (In 15 Mins)</option>
+              </select>
+              <span id="pickupError" class="form-error-msg"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="placeOrderBtn" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+              Place Order →
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Order Summary Sidebar -->
+        <div class="summary-card" id="checkoutSummaryContainer">
+          <!-- Populated by renderCheckoutSummary() in script.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== GLOBAL CART DRAWER ==================== -->
+  <div class="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <span>🛒 Your Cart</span>
+      </h3>
+      <button class="cart-close-btn" aria-label="Close Shopping Cart">×</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer"></div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><span style="color:var(--accent-gold);">CLARET</span> CANTEEN</h3>
+          <p>Campus Food Ordering System — Empowering college students and faculty with fast, queue-free, hygienic dining.</p>
+          <span class="badge badge-claret" style="background:rgba(255,255,255,0.1); color:#FFFFFF;">BCA Final Year Project Demo</span>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Full Food Menu</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="order.html">Track Active Order</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Canteen Timings</h4>
+          <div class="footer-info-item">
+            <span>🕒 Mon – Sat: 8:00 AM – 5:00 PM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>☕ Morning Break: 10:30 AM – 11:00 AM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>🍛 Lunch Break: 12:45 PM – 1:45 PM</span>
+          </div>
+          <div class="footer-info-item">
+            <span>📍 Campus Block C, Ground Floor</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Project Notice</h4>
+          <p style="font-size:0.85rem; color:#9CA3AF; line-height:1.5;">
+            Built with semantic HTML5, modern CSS3, and Vanilla JavaScript. Client-side state managed via localStorage without external databases.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Claret Canteen. All rights reserved.</p>
+        <p>Campus Food Ordering System • BCA Academic Demonstration</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

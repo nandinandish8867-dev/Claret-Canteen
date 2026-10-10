@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="bgIdli" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#EDE4D8"/>
+    </linearGradient>
+    <linearGradient id="idliShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="url(#bgIdli)"/>
+  <ellipse cx="200" cy="180" rx="160" ry="60" fill="#CBD5E1"/>
+  <ellipse cx="200" cy="176" rx="150" ry="54" fill="#E2E8F0"/>
+  <ellipse cx="200" cy="174" rx="142" ry="50" fill="#F8FAFC"/>
+  <path d="M90 170 Q200 130 310 170 Q200 205 90 170 Z" fill="#22C55E" opacity="0.85"/>
+  <ellipse cx="140" cy="165" rx="42" ry="28" fill="url(#idliShade)"/>
+  <ellipse cx="140" cy="160" rx="38" ry="24" fill="#FFFFFF"/>
+  <circle cx="135" cy="155" r="1.5" fill="#CBD5E1"/>
+  <circle cx="146" cy="162" r="1.5" fill="#CBD5E1"/>
+  <ellipse cx="260" cy="165" rx="42" ry="28" fill="url(#idliShade)"/>
+  <ellipse cx="260" cy="160" rx="38" ry="24" fill="#FFFFFF"/>
+  <ellipse cx="200" cy="148" rx="45" ry="30" fill="url(#idliShade)"/>
+  <ellipse cx="200" cy="143" rx="40" ry="26" fill="#FFFFFF"/>
+  <path d="M195 136 Q199 133 204 136" stroke="#16A34A" stroke-width="2" fill="none"/>
+  <ellipse cx="120" cy="88" rx="36" ry="22" fill="#94A3B8"/>
+  <ellipse cx="120" cy="85" rx="32" ry="18" fill="#EA580C"/>
+  <ellipse cx="270" cy="88" rx="36" ry="22" fill="#94A3B8"/>
+  <ellipse cx="270" cy="85" rx="32" ry="18" fill="#F8FAFC"/>
+  <circle cx="272" cy="83" r="2.5" fill="#0F172A"/>
+  <path d="M195 115 Q190 100 200 85" stroke="#CBD5E1" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M210 118 Q218 103 212 88" stroke="#CBD5E1" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
+  <defs>
+    <linearGradient id="puffCrust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="16" fill="#FFFDF8"/>
+  <ellipse cx="200" cy="180" rx="150" ry="50" fill="#E2E8F0"/>
+  <path d="M100 130 Q200 95 300 130 L280 180 Q200 205 120 180 Z" fill="url(#puffCrust)"/>
+  <path d="M110 145 Q200 120 290 145" stroke="#B45309" stroke-width="3" fill="none"/>
+  <path d="M115 160 Q200 135 285 160" stroke="#78350F" stroke-width="2.5" fill="none"/>
+  <ellipse cx="200" cy="165" rx="25" ry="8" fill="#15803D"/>
+  <circle cx="195" cy="164" r="3" fill="#EA580C"/>
+  <circle cx="205" cy="166" r="3" fill="#EAB308"/>
+</svg>
